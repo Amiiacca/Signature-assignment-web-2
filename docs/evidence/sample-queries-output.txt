@@ -1,0 +1,204 @@
+﻿> db.adoptions.countDocuments()
+30 
+
+> db.adoptions.findOne({ AdoptionID: 14 })
+{
+  _id: ObjectId { i0: 7014166, i1: 7001092, i2: 8130868, i3: 5083696 },
+  AdoptionID: 14,
+  UniversityID: 145637,
+  University: {
+    Name: 'University of Illinois Urbana-Champaign',
+    City: 'Champaign',
+    State: 'IL'
+  },
+  Instructor: 'Prof. Omar Haddad',
+  CourseCode: 'CS 210',
+  Term: 'Fall 2023',
+  AdoptionDate: '2023-10-18',
+  Books: [
+    {
+      BookID: 8,
+      ISBN10: '0134605535',
+      Title: 'JavaScript & jQuery: Interactive Front-End Web Development',
+      Quantity: 44
+    }
+  ]
+}
+
+> db.adoptions.find({ UniversityID: 100724 })
+[
+  {
+    _id: ObjectId { i0: 7014166, i1: 7001092, i2: 8130868, i3: 5083683 },
+    AdoptionID: 1,
+    UniversityID: 100724,
+    University: {
+      Name: 'Alabama State University',
+      City: 'Montgomery',
+      State: 'AL'
+    },
+    Instructor: 'Prof. James Chen',
+    CourseCode: 'CS 101',
+    Term: 'Fall 2023',
+    AdoptionDate: '2023-07-26',
+    Books: [
+      {
+        BookID: 8,
+        ISBN10: '0134605535',
+        Title: 'JavaScript & jQuery: Interactive Front-End Web Development',
+        Quantity: 50
+      },
+      {
+        BookID: 7,
+        ISBN10: '0133943038',
+        Title: 'Computer Science: An Overview',
+        Quantity: 149
+      },
+      {
+        BookID: 6,
+        ISBN10: '0134444329',
+        Title: 'Starting Out with Python',
+        Quantity: 109
+      }
+    ]
+  },
+  {
+    _id: ObjectId { i0: 7014166, i1: 7001092, i2: 8130868, i3: 5083686 },
+    AdoptionID: 4,
+    UniversityID: 100724,
+    University: {
+      Name: 'Alabama State University',
+      City: 'Montgomery',
+      State: 'AL'
+    },
+    Instructor: 'Dr. Emily Johnson',
+    CourseCode: 'WEB 220',
+    Term: 'Fall 2023',
+    AdoptionDate: '2023-01-17',
+    Books: [
+      {
+        BookID: 7,
+        ISBN10: '0133943038',
+        Title: 'Computer Science: An Overview',
+        Quantity: 127
+      },
+      {
+        BookID: 8,
+        ISBN10: '0134605535',
+        Title: 'JavaScript & jQuery: Interactive Front-End Web Development',
+        Quantity: 69
+      }
+    ]
+  },
+  {
+    _id: ObjectId { i0: 7014166, i1: 7001092, i2: 8130868, i3: 5083690 },
+    AdoptionID: 8,
+    UniversityID: 100724,
+    University: {
+      Name: 'Alabama State University',
+      City: 'Montgomery',
+      State: 'AL'
+    },
+    Instructor: 'Prof. Robert Miller',
+    CourseCode: 'WEB 220',
+    Term: 'Fall 2022',
+    AdoptionDate: '2022-08-12',
+    Books: [
+      {
+        BookID: 8,
+        ISBN10: '0134605535',
+        Title: 'JavaScript & jQuery: Interactive Front-End Web Development',
+        Quantity: 105
+      }
+    ]
+  },
+  {
+    _id: ObjectId { i0: 7014166, i1: 7001092, i2: 8130868, i3: 5083695 },
+    AdoptionID: 13,
+    UniversityID: 100724,
+    University: {
+      Name: 'Alabama State University',
+      City: 'Montgomery',
+      State: 'AL'
+    },
+    Instructor: 'Dr. Aisha Patel',
+    CourseCode: 'CS 450',
+    Term: 'Summer 2021',
+    AdoptionDate: '2021-04-28',
+    Books: [
+      {
+        BookID: 3,
+        ISBN10: '0135863333',
+        Title: 'Fundamentals of Web Development, 3rd Ed.',
+        Quantity: 46
+      },
+      {
+        BookID: 8,
+        ISBN10: '0134605535',
+        Title: 'JavaScript & jQuery: Interactive Front-End Web Development',
+        Quantity: 18
+      }
+    ]
+  },
+  {
+    _id: ObjectId { i0: 7014166, i1: 7001092, i2: 8130868, i3: 5083699 },
+    AdoptionID: 17,
+    UniversityID: 100724,
+    University: {
+      Name: 'Alabama State University',
+      City: 'Montgomery',
+      State: 'AL'
+    },
+    Instructor: 'Prof. Robert Miller',
+    CourseCode: 'CS 101',
+    Term: 'Fall 2024',
+    AdoptionDate: '2024-05-09',
+    Books: [
+      {
+        BookID: 8,
+        ISBN10: '0134605535',
+        Title: 'JavaScript & jQuery: Interactive Front-End Web Development',
+        Quantity: 134
+      },
+      {
+        BookID: 10,
+        ISBN10: '0134610997',
+        Title: 'Computer Networking: A Top-Down Approach',
+        Quantity: 87
+      }
+    ]
+  },
+  {
+    _id: ObjectId { i0: 7014166, i1: 7001092, i2: 8130868, i3: 5083704 },
+    AdoptionID: 22,
+    UniversityID: 100724,
+    University: {
+      Name: 'Alabama State University',
+      City: 'Montgomery',
+      State: 'AL'
+    },
+    Instructor: 'Prof. David Kim',
+    CourseCode: 'CS 210',
+    Term: 'Spring 2024',
+    AdoptionDate: '2024-05-03',
+    Books: [
+      {
+        BookID: 5,
+        ISBN10: '0134670949',
+        Title: 'Starting Out with Java: From Control Structures through Objects',
+        Quantity: 129
+      }
+    ]
+  }
+]
+
+> db.adoptions.find({ UniversityID: 100724 }, {AdoptionID, AdoptionDate, CourseCode}).sort({ AdoptionDate: -1 })
+┌─────────┬────────────┬────────────┬──────────────┐
+│ (index) │ AdoptionID │ CourseCode │ AdoptionDate │
+├─────────┼────────────┼────────────┼──────────────┤
+│ 0       │ 17         │ 'CS 101'   │ '2024-05-09' │
+│ 1       │ 22         │ 'CS 210'   │ '2024-05-03' │
+│ 2       │ 1          │ 'CS 101'   │ '2023-07-26' │
+│ 3       │ 4          │ 'WEB 220'  │ '2023-01-17' │
+│ 4       │ 8          │ 'WEB 220'  │ '2022-08-12' │
+│ 5       │ 13         │ 'CS 450'   │ '2021-04-28' │
+└─────────┴────────────┴────────────┴──────────────┘

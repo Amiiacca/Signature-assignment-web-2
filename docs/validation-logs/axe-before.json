@@ -1,0 +1,21 @@
+[
+  {
+    "id": "scrollable-region-focusable",
+    "impact": "serious",
+    "help": "Scrollable region must have keyboard access",
+    "nodes": [
+      {
+        "target": [
+          "#all > .table-wrap"
+        ],
+        "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+      },
+      {
+        "target": [
+          "#university > .table-wrap"
+        ],
+        "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+      }
+    ]
+  }
+]

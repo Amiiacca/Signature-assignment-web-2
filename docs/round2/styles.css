@@ -1,0 +1,227 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1d2733;
+  --muted: #56606b;
+  --accent: #1f5fa8;
+  --accent-dark: #174a83;
+  --border: #d6dce2;
+  --ok: #1e7b3a;
+  --fail: #b3261e;
+  --code-bg: #0f1720;
+  --code-text: #e6edf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.site-header {
+  padding: 1.5rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 .25rem;
+  font-size: 1.75rem;
+}
+
+.site-header label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.site-header input {
+  width: min(22rem, 100%);
+  padding: .4rem .6rem;
+  border: 0;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.site-header code {
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  padding: 0 .3rem;
+  border-radius: 3px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.route-card {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  min-width: 0;
+}
+
+.route-card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.route {
+  font-family: Consolas, "Courier New", monospace;
+  background: var(--bg);
+  color: var(--text);
+  padding: .3rem .5rem;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+
+.verb {
+  color: var(--ok);
+  background: var(--bg);
+  font-weight: 700;
+  margin-right: .4rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+
+form input {
+  width: 9rem;
+  padding: .35rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+}
+
+button {
+  padding: .45rem 1rem;
+  border: 0;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+button:focus-visible,
+input:focus-visible,
+.table-wrap:focus-visible,
+pre.output:focus-visible {
+  outline: 3px solid #f2b705;
+  outline-offset: 2px;
+}
+
+.status {
+  margin: .75rem 0 .5rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--card);
+}
+
+.status.ok { color: var(--ok); background: var(--card); }
+.status.fail { color: var(--fail); background: var(--card); }
+
+.table-wrap {
+  overflow-x: auto;
+  max-height: 22rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+
+th,
+td {
+  padding: .35rem .5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  color: var(--text);
+}
+
+details {
+  margin-top: .75rem;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--accent);
+  background: var(--card);
+  font-weight: 600;
+}
+
+pre.output {
+  max-height: 18rem;
+  overflow: auto;
+  padding: .75rem;
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: 6px;
+  font-size: .8rem;
+}
+
+.checks {
+  list-style: none;
+  padding: 0;
+}
+
+.checks li {
+  padding: .35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.checks li::before {
+  font-weight: 700;
+  margin-right: .5rem;
+}
+
+.checks li.pass::before { content: "PASS"; color: var(--ok); background: var(--card); }
+.checks li.fail::before { content: "FAIL"; color: var(--fail); background: var(--card); }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 1rem;
+}
+
+caption {
+  text-align: left;
+  font-size: .85rem;
+  color: var(--muted);
+  background: var(--card);
+  padding-bottom: .25rem;
+}

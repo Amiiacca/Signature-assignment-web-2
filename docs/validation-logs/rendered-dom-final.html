@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adoptions API Tester</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/tester.js" defer=""></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <h1>Adoptions API Tester</h1>
+        <p class="header-subtitle">Each panel calls one route of the Node API with <code>fetch()</code> and shows the JSON it returns.</p>
+      </div>
+      <div class="base-url-bar">
+        <label for="base-url">API base URL</label>
+        <input type="url" id="base-url" value="http://localhost:3000" spellcheck="false">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="route-card" id="all">
+      <h2>All adoptions</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions</p>
+      <p>Returns every adoption sorted by adoption date.</p>
+      <button type="button" data-route="all">Run test</button>
+      <div class="status ok" aria-live="polite">HTTP 200 – 30 adoption(s) in 5 ms</div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="All adoptions: results table"><table><caption>Response from GET /api/adoptions</caption><thead><tr><th scope="col">AdoptionID</th><th scope="col">Date</th><th scope="col">University</th><th scope="col">Course</th><th scope="col">Books</th></tr></thead><tbody><tr><td>13</td><td>2021-04-28</td><td>Alabama State University (100724)</td><td>CS 450</td><td>Fundamentals of Web Development, 3rd Ed. ×46; JavaScript &amp; jQuery: Interactive Front-End Web Development ×18</td></tr><tr><td>15</td><td>2021-06-07</td><td>Arizona State University Campus Immersion (104151)</td><td>CS 101</td><td>Fundamentals of Web Development, 3rd Ed. ×11; Fundamentals of Web Development ×132; Fundamentals of Web Development, 2nd Ed. ×20</td></tr><tr><td>24</td><td>2021-07-09</td><td>The University of Texas at Austin (228778)</td><td>CS 315</td><td>Fundamentals of Web Development, 2nd Ed. ×69; Computer Science: An Overview ×43</td></tr><tr><td>12</td><td>2021-07-13</td><td>University of Colorado Boulder (126614)</td><td>IT 330</td><td>Fundamentals of Web Development ×82; Computer Networking: A Top-Down Approach ×42; Computer Science: An Overview ×40</td></tr><tr><td>27</td><td>2021-08-28</td><td>University of Alabama in Huntsville (100706)</td><td>CS 101</td><td>Fundamentals of Web Development, 2nd Ed. ×47</td></tr><tr><td>11</td><td>2022-02-13</td><td>University of Alabama in Huntsville (100706)</td><td>CS 450</td><td>Computer Networking: A Top-Down Approach ×19</td></tr><tr><td>26</td><td>2022-02-26</td><td>University of Colorado Boulder (126614)</td><td>CIS 240</td><td>Computer Networking: A Top-Down Approach ×125; Fundamentals of Web Development, 3rd Ed. ×96</td></tr><tr><td>6</td><td>2022-04-18</td><td>University of Florida (134130)</td><td>CS 101</td><td>Starting Out with Python ×21; HTML and CSS: Design and Build Websites ×136; Computer Science: An Overview ×146</td></tr><tr><td>30</td><td>2022-05-09</td><td>University of Michigan-Ann Arbor (170976)</td><td>CS 315</td><td>Fundamentals of Database Systems ×117; Fundamentals of Web Development ×136</td></tr><tr><td>8</td><td>2022-08-12</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×105</td></tr><tr><td>7</td><td>2022-10-07</td><td>University of Alabama at Birmingham (100663)</td><td>IT 330</td><td>Fundamentals of Web Development ×69; Fundamentals of Web Development, 2nd Ed. ×63</td></tr><tr><td>4</td><td>2023-01-17</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>Computer Science: An Overview ×127; JavaScript &amp; jQuery: Interactive Front-End Web Development ×69</td></tr><tr><td>25</td><td>2023-06-03</td><td>The University of Alabama (100751)</td><td>WEB 220</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×112; HTML and CSS: Design and Build Websites ×102</td></tr><tr><td>1</td><td>2023-07-26</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×50; Computer Science: An Overview ×149; Starting Out with Python ×109</td></tr><tr><td>9</td><td>2023-10-18</td><td>The University of Texas at Austin (228778)</td><td>CS 315</td><td>Starting Out with Java: From Control Structures through Objects ×50; Fundamentals of Web Development, 3rd Ed. ×148</td></tr><tr><td>14</td><td>2023-10-18</td><td>University of Illinois Urbana-Champaign (145637)</td><td>CS 210</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×44</td></tr><tr><td>23</td><td>2023-11-04</td><td>University of Alabama at Birmingham (100663)</td><td>CS 315</td><td>Fundamentals of Web Development, 2nd Ed. ×108; Computer Networking: A Top-Down Approach ×144; Starting Out with Python ×19</td></tr><tr><td>18</td><td>2023-11-24</td><td>Alabama A &amp; M University (100654)</td><td>CS 101</td><td>HTML and CSS: Design and Build Websites ×104; Fundamentals of Web Development ×95; Fundamentals of Database Systems ×128</td></tr><tr><td>20</td><td>2024-02-05</td><td>University of California-Berkeley (110635)</td><td>CS 450</td><td>Fundamentals of Web Development, 2nd Ed. ×63</td></tr><tr><td>16</td><td>2024-03-22</td><td>University of Michigan-Ann Arbor (170976)</td><td>CIS 240</td><td>Fundamentals of Database Systems ×110</td></tr><tr><td>22</td><td>2024-05-03</td><td>Alabama State University (100724)</td><td>CS 210</td><td>Starting Out with Java: From Control Structures through Objects ×129</td></tr><tr><td>2</td><td>2024-05-08</td><td>Alabama A &amp; M University (100654)</td><td>WEB 220</td><td>HTML and CSS: Design and Build Websites ×49</td></tr><tr><td>17</td><td>2024-05-09</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×134; Computer Networking: A Top-Down Approach ×87</td></tr><tr><td>21</td><td>2024-05-18</td><td>University of Florida (134130)</td><td>CS 101</td><td>Computer Science: An Overview ×82; Starting Out with Java: From Control Structures through Objects ×34; Fundamentals of Web Development ×114</td></tr><tr><td>28</td><td>2024-07-19</td><td>University of Illinois Urbana-Champaign (145637)</td><td>IT 330</td><td>Fundamentals of Web Development, 3rd Ed. ×114; Fundamentals of Web Development, 2nd Ed. ×111</td></tr><tr><td>19</td><td>2024-08-01</td><td>Auburn University (100858)</td><td>CS 101</td><td>Starting Out with Python ×108; Fundamentals of Database Systems ×20; Fundamentals of Web Development, 2nd Ed. ×32</td></tr><tr><td>3</td><td>2025-01-22</td><td>University of California-Berkeley (110635)</td><td>CS 101</td><td>HTML and CSS: Design and Build Websites ×80; Fundamentals of Web Development, 2nd Ed. ×117; Fundamentals of Database Systems ×47</td></tr><tr><td>5</td><td>2025-02-24</td><td>Auburn University (100858)</td><td>CS 101</td><td>Fundamentals of Web Development ×141</td></tr><tr><td>10</td><td>2025-08-03</td><td>The University of Alabama (100751)</td><td>CS 450</td><td>Starting Out with Python ×119; Fundamentals of Web Development, 2nd Ed. ×100; Fundamentals of Web Development ×131</td></tr><tr><td>29</td><td>2025-12-04</td><td>Arizona State University Campus Immersion (104151)</td><td>CS 315</td><td>Fundamentals of Web Development, 2nd Ed. ×52; Computer Networking: A Top-Down Approach ×85; HTML and CSS: Design and Build Websites ×140</td></tr></tbody></table></div>
+      <details class="json-details" open="">
+        <summary>Raw JSON</summary>
+        <div class="json-toolbar">
+          <button type="button" class="json-btn" data-copy="">Copy JSON</button>
+          <button type="button" class="json-btn" data-collapse="">Collapse</button>
+        </div>
+        <pre class="output" tabindex="0" role="region" aria-label="All adoptions: raw JSON">[
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">13</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Aisha Patel",
+    <span class="json-key">"CourseCode"</span>: "CS 450",
+    <span class="json-key">"Term"</span>: "Summer 2021",
+    <span class="json-key">"AdoptionDate"</span>: "2021-04-28",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">3</span>,
+        <span class="json-key">"ISBN10"</span>: "0135863333",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 3rd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">46</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">18</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">15</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">104151</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Arizona State University Campus Immersion",
+      <span class="json-key">"City"</span>: "Tempe",
+      <span class="json-key">"State"</span>: "AZ"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Aisha Patel",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Summer 2021",
+    <span class="json-key">"AdoptionDate"</span>: "2021-06-07",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">3</span>,
+        <span class="json-key">"ISBN10"</span>: "0135863333",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 3rd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">11</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">132</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">20</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">24</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">228778</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "The University of Texas at Austin",
+      <span class="json-key">"City"</span>: "Austin",
+      <span class="json-key">"State"</span>: "TX"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. James Chen",
+    <span class="json-key">"CourseCode"</span>: "CS 315",
+    <span class="json-key">"Term"</span>: "Spring 2021",
+    <span class="json-key">"AdoptionDate"</span>: "2021-07-09",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">69</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">43</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">12</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">126614</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Colorado Boulder",
+      <span class="json-key">"City"</span>: "Boulder",
+      <span class="json-key">"State"</span>: "CO"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Sofia Ramirez",
+    <span class="json-key">"CourseCode"</span>: "IT 330",
+    <span class="json-key">"Term"</span>: "Spring 2021",
+    <span class="json-key">"AdoptionDate"</span>: "2021-07-13",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">82</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">10</span>,
+        <span class="json-key">"ISBN10"</span>: "0134610997",
+        <span class="json-key">"Title"</span>: "Computer Networking: A Top-Down Approach",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">42</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">40</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">27</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100706</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Alabama in Huntsville",
+      <span class="json-key">"City"</span>: "Huntsville",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. David Kim",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Summer 2021",
+    <span class="json-key">"AdoptionDate"</span>: "2021-08-28",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">47</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">11</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100706</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Alabama in Huntsville",
+      <span class="json-key">"City"</span>: "Huntsville",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Aisha Patel",
+    <span class="json-key">"CourseCode"</span>: "CS 450",
+    <span class="json-key">"Term"</span>: "Spring 2022",
+    <span class="json-key">"AdoptionDate"</span>: "2022-02-13",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">10</span>,
+        <span class="json-key">"ISBN10"</span>: "0134610997",
+        <span class="json-key">"Title"</span>: "Computer Networking: A Top-Down Approach",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">19</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">26</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">126614</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Colorado Boulder",
+      <span class="json-key">"City"</span>: "Boulder",
+      <span class="json-key">"State"</span>: "CO"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. David Kim",
+    <span class="json-key">"CourseCode"</span>: "CIS 240",
+    <span class="json-key">"Term"</span>: "Summer 2022",
+    <span class="json-key">"AdoptionDate"</span>: "2022-02-26",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">10</span>,
+        <span class="json-key">"ISBN10"</span>: "0134610997",
+        <span class="json-key">"Title"</span>: "Computer Networking: A Top-Down Approach",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">125</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">3</span>,
+        <span class="json-key">"ISBN10"</span>: "0135863333",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 3rd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">96</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">6</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">134130</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Florida",
+      <span class="json-key">"City"</span>: "Gainesville",
+      <span class="json-key">"State"</span>: "FL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Sofia Ramirez",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2022",
+    <span class="json-key">"AdoptionDate"</span>: "2022-04-18",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">6</span>,
+        <span class="json-key">"ISBN10"</span>: "0134444329",
+        <span class="json-key">"Title"</span>: "Starting Out with Python",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">21</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">9</span>,
+        <span class="json-key">"ISBN10"</span>: "1118531647",
+        <span class="json-key">"Title"</span>: "HTML and CSS: Design and Build Websites",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">136</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">146</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">30</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">170976</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Michigan-Ann Arbor",
+      <span class="json-key">"City"</span>: "Ann Arbor",
+      <span class="json-key">"State"</span>: "MI"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "CS 315",
+    <span class="json-key">"Term"</span>: "Summer 2022",
+    <span class="json-key">"AdoptionDate"</span>: "2022-05-09",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">4</span>,
+        <span class="json-key">"ISBN10"</span>: "0133970779",
+        <span class="json-key">"Title"</span>: "Fundamentals of Database Systems",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">117</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">136</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">8</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "WEB 220",
+    <span class="json-key">"Term"</span>: "Fall 2022",
+    <span class="json-key">"AdoptionDate"</span>: "2022-08-12",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">105</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">7</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100663</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Alabama at Birmingham",
+      <span class="json-key">"City"</span>: "Birmingham",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Aisha Patel",
+    <span class="json-key">"CourseCode"</span>: "IT 330",
+    <span class="json-key">"Term"</span>: "Summer 2022",
+    <span class="json-key">"AdoptionDate"</span>: "2022-10-07",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">69</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">63</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">4</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Emily Johnson",
+    <span class="json-key">"CourseCode"</span>: "WEB 220",
+    <span class="json-key">"Term"</span>: "Fall 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-01-17",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">127</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">69</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">25</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100751</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "The University of Alabama",
+      <span class="json-key">"City"</span>: "Tuscaloosa",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Maria Lopez",
+    <span class="json-key">"CourseCode"</span>: "WEB 220",
+    <span class="json-key">"Term"</span>: "Summer 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-06-03",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">112</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">9</span>,
+        <span class="json-key">"ISBN10"</span>: "1118531647",
+        <span class="json-key">"Title"</span>: "HTML and CSS: Design and Build Websites",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">102</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">1</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. James Chen",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-07-26",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">50</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">149</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">6</span>,
+        <span class="json-key">"ISBN10"</span>: "0134444329",
+        <span class="json-key">"Title"</span>: "Starting Out with Python",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">109</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">9</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">228778</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "The University of Texas at Austin",
+      <span class="json-key">"City"</span>: "Austin",
+      <span class="json-key">"State"</span>: "TX"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Maria Lopez",
+    <span class="json-key">"CourseCode"</span>: "CS 315",
+    <span class="json-key">"Term"</span>: "Spring 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-10-18",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">5</span>,
+        <span class="json-key">"ISBN10"</span>: "0134670949",
+        <span class="json-key">"Title"</span>: "Starting Out with Java: From Control Structures through Objects",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">50</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">3</span>,
+        <span class="json-key">"ISBN10"</span>: "0135863333",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 3rd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">148</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">14</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">145637</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Illinois Urbana-Champaign",
+      <span class="json-key">"City"</span>: "Champaign",
+      <span class="json-key">"State"</span>: "IL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Omar Haddad",
+    <span class="json-key">"CourseCode"</span>: "CS 210",
+    <span class="json-key">"Term"</span>: "Fall 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-10-18",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">44</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">23</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100663</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Alabama at Birmingham",
+      <span class="json-key">"City"</span>: "Birmingham",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. David Kim",
+    <span class="json-key">"CourseCode"</span>: "CS 315",
+    <span class="json-key">"Term"</span>: "Spring 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-11-04",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">108</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">10</span>,
+        <span class="json-key">"ISBN10"</span>: "0134610997",
+        <span class="json-key">"Title"</span>: "Computer Networking: A Top-Down Approach",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">144</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">6</span>,
+        <span class="json-key">"ISBN10"</span>: "0134444329",
+        <span class="json-key">"Title"</span>: "Starting Out with Python",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">19</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">18</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100654</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama A &amp; M University",
+      <span class="json-key">"City"</span>: "Normal",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Spring 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-11-24",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">9</span>,
+        <span class="json-key">"ISBN10"</span>: "1118531647",
+        <span class="json-key">"Title"</span>: "HTML and CSS: Design and Build Websites",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">104</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">95</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">4</span>,
+        <span class="json-key">"ISBN10"</span>: "0133970779",
+        <span class="json-key">"Title"</span>: "Fundamentals of Database Systems",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">128</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">20</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">110635</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of California-Berkeley",
+      <span class="json-key">"City"</span>: "Berkeley",
+      <span class="json-key">"State"</span>: "CA"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Emily Johnson",
+    <span class="json-key">"CourseCode"</span>: "CS 450",
+    <span class="json-key">"Term"</span>: "Spring 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-02-05",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">63</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">16</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">170976</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Michigan-Ann Arbor",
+      <span class="json-key">"City"</span>: "Ann Arbor",
+      <span class="json-key">"State"</span>: "MI"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Sofia Ramirez",
+    <span class="json-key">"CourseCode"</span>: "CIS 240",
+    <span class="json-key">"Term"</span>: "Summer 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-03-22",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">4</span>,
+        <span class="json-key">"ISBN10"</span>: "0133970779",
+        <span class="json-key">"Title"</span>: "Fundamentals of Database Systems",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">110</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">22</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. David Kim",
+    <span class="json-key">"CourseCode"</span>: "CS 210",
+    <span class="json-key">"Term"</span>: "Spring 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-05-03",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">5</span>,
+        <span class="json-key">"ISBN10"</span>: "0134670949",
+        <span class="json-key">"Title"</span>: "Starting Out with Java: From Control Structures through Objects",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">129</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">2</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100654</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama A &amp; M University",
+      <span class="json-key">"City"</span>: "Normal",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Emily Johnson",
+    <span class="json-key">"CourseCode"</span>: "WEB 220",
+    <span class="json-key">"Term"</span>: "Spring 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-05-08",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">9</span>,
+        <span class="json-key">"ISBN10"</span>: "1118531647",
+        <span class="json-key">"Title"</span>: "HTML and CSS: Design and Build Websites",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">49</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">17</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-05-09",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">134</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">10</span>,
+        <span class="json-key">"ISBN10"</span>: "0134610997",
+        <span class="json-key">"Title"</span>: "Computer Networking: A Top-Down Approach",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">87</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">21</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">134130</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Florida",
+      <span class="json-key">"City"</span>: "Gainesville",
+      <span class="json-key">"State"</span>: "FL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Maria Lopez",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Spring 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-05-18",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">82</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">5</span>,
+        <span class="json-key">"ISBN10"</span>: "0134670949",
+        <span class="json-key">"Title"</span>: "Starting Out with Java: From Control Structures through Objects",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">34</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">114</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">28</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">145637</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of Illinois Urbana-Champaign",
+      <span class="json-key">"City"</span>: "Champaign",
+      <span class="json-key">"State"</span>: "IL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. David Kim",
+    <span class="json-key">"CourseCode"</span>: "IT 330",
+    <span class="json-key">"Term"</span>: "Spring 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-07-19",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">3</span>,
+        <span class="json-key">"ISBN10"</span>: "0135863333",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 3rd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">114</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">111</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">19</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100858</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Auburn University",
+      <span class="json-key">"City"</span>: "Auburn",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. James Chen",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-08-01",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">6</span>,
+        <span class="json-key">"ISBN10"</span>: "0134444329",
+        <span class="json-key">"Title"</span>: "Starting Out with Python",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">108</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">4</span>,
+        <span class="json-key">"ISBN10"</span>: "0133970779",
+        <span class="json-key">"Title"</span>: "Fundamentals of Database Systems",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">20</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">32</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">3</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">110635</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "University of California-Berkeley",
+      <span class="json-key">"City"</span>: "Berkeley",
+      <span class="json-key">"State"</span>: "CA"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. David Kim",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2025",
+    <span class="json-key">"AdoptionDate"</span>: "2025-01-22",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">9</span>,
+        <span class="json-key">"ISBN10"</span>: "1118531647",
+        <span class="json-key">"Title"</span>: "HTML and CSS: Design and Build Websites",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">80</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">117</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">4</span>,
+        <span class="json-key">"ISBN10"</span>: "0133970779",
+        <span class="json-key">"Title"</span>: "Fundamentals of Database Systems",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">47</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">5</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100858</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Auburn University",
+      <span class="json-key">"City"</span>: "Auburn",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2025",
+    <span class="json-key">"AdoptionDate"</span>: "2025-02-24",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">141</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">10</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100751</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "The University of Alabama",
+      <span class="json-key">"City"</span>: "Tuscaloosa",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Emily Johnson",
+    <span class="json-key">"CourseCode"</span>: "CS 450",
+    <span class="json-key">"Term"</span>: "Spring 2025",
+    <span class="json-key">"AdoptionDate"</span>: "2025-08-03",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">6</span>,
+        <span class="json-key">"ISBN10"</span>: "0134444329",
+        <span class="json-key">"Title"</span>: "Starting Out with Python",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">119</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">100</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">1</span>,
+        <span class="json-key">"ISBN10"</span>: "0133407152",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">131</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">29</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">104151</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Arizona State University Campus Immersion",
+      <span class="json-key">"City"</span>: "Tempe",
+      <span class="json-key">"State"</span>: "AZ"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "CS 315",
+    <span class="json-key">"Term"</span>: "Fall 2025",
+    <span class="json-key">"AdoptionDate"</span>: "2025-12-04",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">2</span>,
+        <span class="json-key">"ISBN10"</span>: "0134481267",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 2nd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">52</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">10</span>,
+        <span class="json-key">"ISBN10"</span>: "0134610997",
+        <span class="json-key">"Title"</span>: "Computer Networking: A Top-Down Approach",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">85</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">9</span>,
+        <span class="json-key">"ISBN10"</span>: "1118531647",
+        <span class="json-key">"Title"</span>: "HTML and CSS: Design and Build Websites",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">140</span>
+      }
+    ]
+  }
+]</pre>
+      </details>
+    </section>
+
+    <section class="route-card" id="single">
+      <h2>Single adoption</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions/:id</p>
+      <form data-route="single">
+        <label for="adoption-id">AdoptionID</label>
+        <input type="number" id="adoption-id" value="14" min="1" required="">
+        <button type="submit">Run test</button>
+      </form>
+      <div class="status ok" aria-live="polite">HTTP 200 – 1 adoption(s) in 9 ms</div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Single adoption: results table"><table><caption>Response from GET /api/adoptions/14</caption><thead><tr><th scope="col">AdoptionID</th><th scope="col">Date</th><th scope="col">University</th><th scope="col">Course</th><th scope="col">Books</th></tr></thead><tbody><tr><td>14</td><td>2023-10-18</td><td>University of Illinois Urbana-Champaign (145637)</td><td>CS 210</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×44</td></tr></tbody></table></div>
+      <details class="json-details" open="">
+        <summary>Raw JSON</summary>
+        <div class="json-toolbar">
+          <button type="button" class="json-btn" data-copy="">Copy JSON</button>
+          <button type="button" class="json-btn" data-collapse="">Collapse</button>
+        </div>
+        <pre class="output" tabindex="0" role="region" aria-label="Single adoption: raw JSON">{
+  <span class="json-key">"AdoptionID"</span>: <span class="json-val">14</span>,
+  <span class="json-key">"UniversityID"</span>: <span class="json-val">145637</span>,
+  <span class="json-key">"University"</span>: {
+    <span class="json-key">"Name"</span>: "University of Illinois Urbana-Champaign",
+    <span class="json-key">"City"</span>: "Champaign",
+    <span class="json-key">"State"</span>: "IL"
+  },
+  <span class="json-key">"Instructor"</span>: "Prof. Omar Haddad",
+  <span class="json-key">"CourseCode"</span>: "CS 210",
+  <span class="json-key">"Term"</span>: "Fall 2023",
+  <span class="json-key">"AdoptionDate"</span>: "2023-10-18",
+  <span class="json-key">"Books"</span>: [
+    {
+      <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+      <span class="json-key">"ISBN10"</span>: "0134605535",
+      <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+      <span class="json-key">"Quantity"</span>: <span class="json-val">44</span>
+    }
+  ]
+}</pre>
+      </details>
+    </section>
+
+    <section class="route-card" id="university">
+      <h2>Adoptions by university</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions/university/:id</p>
+      <form data-route="university">
+        <label for="university-id">UniversityID</label>
+        <input type="number" id="university-id" value="100724" min="1" required="">
+        <button type="submit">Run test</button>
+      </form>
+      <div class="status ok" aria-live="polite">HTTP 200 – 6 adoption(s) in 3 ms</div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Adoptions by university: results table"><table><caption>Response from GET /api/adoptions/university/100724</caption><thead><tr><th scope="col">AdoptionID</th><th scope="col">Date</th><th scope="col">University</th><th scope="col">Course</th><th scope="col">Books</th></tr></thead><tbody><tr><td>13</td><td>2021-04-28</td><td>Alabama State University (100724)</td><td>CS 450</td><td>Fundamentals of Web Development, 3rd Ed. ×46; JavaScript &amp; jQuery: Interactive Front-End Web Development ×18</td></tr><tr><td>8</td><td>2022-08-12</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×105</td></tr><tr><td>4</td><td>2023-01-17</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>Computer Science: An Overview ×127; JavaScript &amp; jQuery: Interactive Front-End Web Development ×69</td></tr><tr><td>1</td><td>2023-07-26</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×50; Computer Science: An Overview ×149; Starting Out with Python ×109</td></tr><tr><td>22</td><td>2024-05-03</td><td>Alabama State University (100724)</td><td>CS 210</td><td>Starting Out with Java: From Control Structures through Objects ×129</td></tr><tr><td>17</td><td>2024-05-09</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×134; Computer Networking: A Top-Down Approach ×87</td></tr></tbody></table></div>
+      <details class="json-details" open="">
+        <summary>Raw JSON</summary>
+        <div class="json-toolbar">
+          <button type="button" class="json-btn" data-copy="">Copy JSON</button>
+          <button type="button" class="json-btn" data-collapse="">Collapse</button>
+        </div>
+        <pre class="output" tabindex="0" role="region" aria-label="Adoptions by university: raw JSON">[
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">13</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Aisha Patel",
+    <span class="json-key">"CourseCode"</span>: "CS 450",
+    <span class="json-key">"Term"</span>: "Summer 2021",
+    <span class="json-key">"AdoptionDate"</span>: "2021-04-28",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">3</span>,
+        <span class="json-key">"ISBN10"</span>: "0135863333",
+        <span class="json-key">"Title"</span>: "Fundamentals of Web Development, 3rd Ed.",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">46</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">18</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">8</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "WEB 220",
+    <span class="json-key">"Term"</span>: "Fall 2022",
+    <span class="json-key">"AdoptionDate"</span>: "2022-08-12",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">105</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">4</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Dr. Emily Johnson",
+    <span class="json-key">"CourseCode"</span>: "WEB 220",
+    <span class="json-key">"Term"</span>: "Fall 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-01-17",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">127</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">69</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">1</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. James Chen",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2023",
+    <span class="json-key">"AdoptionDate"</span>: "2023-07-26",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">50</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">7</span>,
+        <span class="json-key">"ISBN10"</span>: "0133943038",
+        <span class="json-key">"Title"</span>: "Computer Science: An Overview",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">149</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">6</span>,
+        <span class="json-key">"ISBN10"</span>: "0134444329",
+        <span class="json-key">"Title"</span>: "Starting Out with Python",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">109</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">22</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. David Kim",
+    <span class="json-key">"CourseCode"</span>: "CS 210",
+    <span class="json-key">"Term"</span>: "Spring 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-05-03",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">5</span>,
+        <span class="json-key">"ISBN10"</span>: "0134670949",
+        <span class="json-key">"Title"</span>: "Starting Out with Java: From Control Structures through Objects",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">129</span>
+      }
+    ]
+  },
+  {
+    <span class="json-key">"AdoptionID"</span>: <span class="json-val">17</span>,
+    <span class="json-key">"UniversityID"</span>: <span class="json-val">100724</span>,
+    <span class="json-key">"University"</span>: {
+      <span class="json-key">"Name"</span>: "Alabama State University",
+      <span class="json-key">"City"</span>: "Montgomery",
+      <span class="json-key">"State"</span>: "AL"
+    },
+    <span class="json-key">"Instructor"</span>: "Prof. Robert Miller",
+    <span class="json-key">"CourseCode"</span>: "CS 101",
+    <span class="json-key">"Term"</span>: "Fall 2024",
+    <span class="json-key">"AdoptionDate"</span>: "2024-05-09",
+    <span class="json-key">"Books"</span>: [
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">8</span>,
+        <span class="json-key">"ISBN10"</span>: "0134605535",
+        <span class="json-key">"Title"</span>: "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">134</span>
+      },
+      {
+        <span class="json-key">"BookID"</span>: <span class="json-val">10</span>,
+        <span class="json-key">"ISBN10"</span>: "0134610997",
+        <span class="json-key">"Title"</span>: "Computer Networking: A Top-Down Approach",
+        <span class="json-key">"Quantity"</span>: <span class="json-val">87</span>
+      }
+    ]
+  }
+]</pre>
+      </details>
+    </section>
+
+    <section class="route-card" id="checks">
+      <h2>Automated checks</h2>
+      <p>Runs all three routes plus two error cases and checks each response.</p>
+      <button type="button" id="run-all">Run all checks</button>
+      <ul class="checks" aria-live="polite"><li class="pass">GET /api/adoptions returns a non-empty array sorted by AdoptionDate</li><li class="pass">GET /api/adoptions/14 returns the adoption with AdoptionID 14</li><li class="pass">GET /api/adoptions/university/100724 returns only UniversityID 100724</li><li class="pass">GET /api/adoptions/9999 returns 404 for a missing adoption</li><li class="pass">GET /api/adoptions/abc returns 400 for a non-numeric id</li></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Signature Assignment – Web Development II</p>
+    </div>
+  </footer>
+
+
+</body></html>

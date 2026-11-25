@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adoptions API Tester</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/tester.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <h1>Adoptions API Tester</h1>
+        <p class="header-subtitle">Each panel calls one route of the Node API with <code>fetch()</code> and shows the JSON it returns.</p>
+      </div>
+      <div class="base-url-bar">
+        <label for="base-url">API base URL</label>
+        <input type="url" id="base-url" value="http://localhost:3000" spellcheck="false">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="route-card" id="all">
+      <h2>All adoptions</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions</p>
+      <p>Returns every adoption sorted by adoption date.</p>
+      <button type="button" data-route="all">Run test</button>
+      <div class="status" aria-live="polite"></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="All adoptions: results table"></div>
+      <details class="json-details">
+        <summary>Raw JSON</summary>
+        <div class="json-toolbar">
+          <button type="button" class="json-btn" data-copy>Copy JSON</button>
+          <button type="button" class="json-btn" data-collapse>Collapse</button>
+        </div>
+        <pre class="output" tabindex="0" role="region" aria-label="All adoptions: raw JSON"></pre>
+      </details>
+    </section>
+
+    <section class="route-card" id="single">
+      <h2>Single adoption</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions/:id</p>
+      <form data-route="single">
+        <label for="adoption-id">AdoptionID</label>
+        <input type="number" id="adoption-id" value="14" min="1" required>
+        <button type="submit">Run test</button>
+      </form>
+      <div class="status" aria-live="polite"></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Single adoption: results table"></div>
+      <details class="json-details">
+        <summary>Raw JSON</summary>
+        <div class="json-toolbar">
+          <button type="button" class="json-btn" data-copy>Copy JSON</button>
+          <button type="button" class="json-btn" data-collapse>Collapse</button>
+        </div>
+        <pre class="output" tabindex="0" role="region" aria-label="Single adoption: raw JSON"></pre>
+      </details>
+    </section>
+
+    <section class="route-card" id="university">
+      <h2>Adoptions by university</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions/university/:id</p>
+      <form data-route="university">
+        <label for="university-id">UniversityID</label>
+        <input type="number" id="university-id" value="100724" min="1" required>
+        <button type="submit">Run test</button>
+      </form>
+      <div class="status" aria-live="polite"></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Adoptions by university: results table"></div>
+      <details class="json-details">
+        <summary>Raw JSON</summary>
+        <div class="json-toolbar">
+          <button type="button" class="json-btn" data-copy>Copy JSON</button>
+          <button type="button" class="json-btn" data-collapse>Collapse</button>
+        </div>
+        <pre class="output" tabindex="0" role="region" aria-label="Adoptions by university: raw JSON"></pre>
+      </details>
+    </section>
+
+    <section class="route-card" id="checks">
+      <h2>Automated checks</h2>
+      <p>Runs all three routes plus two error cases and checks each response.</p>
+      <button type="button" id="run-all">Run all checks</button>
+      <ul class="checks" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Signature Assignment &ndash; Web Development II</p>
+    </div>
+  </footer>
+</body>
+</html>

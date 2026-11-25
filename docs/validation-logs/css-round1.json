@@ -1,0 +1,136 @@
+{
+  "cssvalidation" : {
+     "uri"       : "styles.css",
+     "checkedby" : "http://www.w3.org/2005/07/css-validator",
+     "csslevel"  : "css3",
+     "date"      : "2026-11-25T05:10:19Z",
+     "timestamp" : "1795626619261",
+     "validity"  : true,
+     "result"    : {
+		"errorcount"   : 0,
+		"warningcount" : 15
+                   }
+       ,
+     "warnings"   : [
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 21,
+         "message" :  "\u201Csystem-ui,-apple-system,\"Segoe UI\",Roboto,sans-serif\u201D is a vendor extension",
+         "type"    :  "vendor-extension",
+         "level"   : 0
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 54,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 69,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 83,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 90,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 123,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 123,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 135,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 138,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 139,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 163,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 172,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 201,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 202,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 206,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+                     ]
+    }
+}

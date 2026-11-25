@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Local MongoDB data directory (if mongod is pointed inside the project)
+data/db/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+.idea/

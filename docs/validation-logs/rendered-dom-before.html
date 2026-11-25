@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adoptions API Tester</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/tester.js" defer=""></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Adoptions API Tester</h1>
+    <p>Each panel calls one route of the Node API with <code>fetch()</code> and shows the JSON it returns.</p>
+    <label for="base-url">API base URL</label>
+    <input type="url" id="base-url" value="http://localhost:3000" spellcheck="false">
+  </header>
+
+  <main>
+    <section class="route-card" id="all">
+      <h2>All adoptions</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions</p>
+      <p>Returns every adoption sorted by adoption date.</p>
+      <button type="button" data-route="all">Run test</button>
+      <div class="status ok" aria-live="polite">HTTP 200 – 30 adoption(s) in 5 ms</div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">AdoptionID</th><th scope="col">Date</th><th scope="col">University</th><th scope="col">Course</th><th scope="col">Books</th></tr></thead><tbody><tr><td>13</td><td>2021-04-28</td><td>Alabama State University (100724)</td><td>CS 450</td><td>Fundamentals of Web Development, 3rd Ed. ×46; JavaScript &amp; jQuery: Interactive Front-End Web Development ×18</td></tr><tr><td>15</td><td>2021-06-07</td><td>Arizona State University Campus Immersion (104151)</td><td>CS 101</td><td>Fundamentals of Web Development, 3rd Ed. ×11; Fundamentals of Web Development ×132; Fundamentals of Web Development, 2nd Ed. ×20</td></tr><tr><td>24</td><td>2021-07-09</td><td>The University of Texas at Austin (228778)</td><td>CS 315</td><td>Fundamentals of Web Development, 2nd Ed. ×69; Computer Science: An Overview ×43</td></tr><tr><td>12</td><td>2021-07-13</td><td>University of Colorado Boulder (126614)</td><td>IT 330</td><td>Fundamentals of Web Development ×82; Computer Networking: A Top-Down Approach ×42; Computer Science: An Overview ×40</td></tr><tr><td>27</td><td>2021-08-28</td><td>University of Alabama in Huntsville (100706)</td><td>CS 101</td><td>Fundamentals of Web Development, 2nd Ed. ×47</td></tr><tr><td>11</td><td>2022-02-13</td><td>University of Alabama in Huntsville (100706)</td><td>CS 450</td><td>Computer Networking: A Top-Down Approach ×19</td></tr><tr><td>26</td><td>2022-02-26</td><td>University of Colorado Boulder (126614)</td><td>CIS 240</td><td>Computer Networking: A Top-Down Approach ×125; Fundamentals of Web Development, 3rd Ed. ×96</td></tr><tr><td>6</td><td>2022-04-18</td><td>University of Florida (134130)</td><td>CS 101</td><td>Starting Out with Python ×21; HTML and CSS: Design and Build Websites ×136; Computer Science: An Overview ×146</td></tr><tr><td>30</td><td>2022-05-09</td><td>University of Michigan-Ann Arbor (170976)</td><td>CS 315</td><td>Fundamentals of Database Systems ×117; Fundamentals of Web Development ×136</td></tr><tr><td>8</td><td>2022-08-12</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×105</td></tr><tr><td>7</td><td>2022-10-07</td><td>University of Alabama at Birmingham (100663)</td><td>IT 330</td><td>Fundamentals of Web Development ×69; Fundamentals of Web Development, 2nd Ed. ×63</td></tr><tr><td>4</td><td>2023-01-17</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>Computer Science: An Overview ×127; JavaScript &amp; jQuery: Interactive Front-End Web Development ×69</td></tr><tr><td>25</td><td>2023-06-03</td><td>The University of Alabama (100751)</td><td>WEB 220</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×112; HTML and CSS: Design and Build Websites ×102</td></tr><tr><td>1</td><td>2023-07-26</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×50; Computer Science: An Overview ×149; Starting Out with Python ×109</td></tr><tr><td>9</td><td>2023-10-18</td><td>The University of Texas at Austin (228778)</td><td>CS 315</td><td>Starting Out with Java: From Control Structures through Objects ×50; Fundamentals of Web Development, 3rd Ed. ×148</td></tr><tr><td>14</td><td>2023-10-18</td><td>University of Illinois Urbana-Champaign (145637)</td><td>CS 210</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×44</td></tr><tr><td>23</td><td>2023-11-04</td><td>University of Alabama at Birmingham (100663)</td><td>CS 315</td><td>Fundamentals of Web Development, 2nd Ed. ×108; Computer Networking: A Top-Down Approach ×144; Starting Out with Python ×19</td></tr><tr><td>18</td><td>2023-11-24</td><td>Alabama A &amp; M University (100654)</td><td>CS 101</td><td>HTML and CSS: Design and Build Websites ×104; Fundamentals of Web Development ×95; Fundamentals of Database Systems ×128</td></tr><tr><td>20</td><td>2024-02-05</td><td>University of California-Berkeley (110635)</td><td>CS 450</td><td>Fundamentals of Web Development, 2nd Ed. ×63</td></tr><tr><td>16</td><td>2024-03-22</td><td>University of Michigan-Ann Arbor (170976)</td><td>CIS 240</td><td>Fundamentals of Database Systems ×110</td></tr><tr><td>22</td><td>2024-05-03</td><td>Alabama State University (100724)</td><td>CS 210</td><td>Starting Out with Java: From Control Structures through Objects ×129</td></tr><tr><td>2</td><td>2024-05-08</td><td>Alabama A &amp; M University (100654)</td><td>WEB 220</td><td>HTML and CSS: Design and Build Websites ×49</td></tr><tr><td>17</td><td>2024-05-09</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×134; Computer Networking: A Top-Down Approach ×87</td></tr><tr><td>21</td><td>2024-05-18</td><td>University of Florida (134130)</td><td>CS 101</td><td>Computer Science: An Overview ×82; Starting Out with Java: From Control Structures through Objects ×34; Fundamentals of Web Development ×114</td></tr><tr><td>28</td><td>2024-07-19</td><td>University of Illinois Urbana-Champaign (145637)</td><td>IT 330</td><td>Fundamentals of Web Development, 3rd Ed. ×114; Fundamentals of Web Development, 2nd Ed. ×111</td></tr><tr><td>19</td><td>2024-08-01</td><td>Auburn University (100858)</td><td>CS 101</td><td>Starting Out with Python ×108; Fundamentals of Database Systems ×20; Fundamentals of Web Development, 2nd Ed. ×32</td></tr><tr><td>3</td><td>2025-01-22</td><td>University of California-Berkeley (110635)</td><td>CS 101</td><td>HTML and CSS: Design and Build Websites ×80; Fundamentals of Web Development, 2nd Ed. ×117; Fundamentals of Database Systems ×47</td></tr><tr><td>5</td><td>2025-02-24</td><td>Auburn University (100858)</td><td>CS 101</td><td>Fundamentals of Web Development ×141</td></tr><tr><td>10</td><td>2025-08-03</td><td>The University of Alabama (100751)</td><td>CS 450</td><td>Starting Out with Python ×119; Fundamentals of Web Development, 2nd Ed. ×100; Fundamentals of Web Development ×131</td></tr><tr><td>29</td><td>2025-12-04</td><td>Arizona State University Campus Immersion (104151)</td><td>CS 315</td><td>Fundamentals of Web Development, 2nd Ed. ×52; Computer Networking: A Top-Down Approach ×85; HTML and CSS: Design and Build Websites ×140</td></tr></tbody></table></div>
+      <details><summary>Raw JSON</summary><pre class="output">[
+  {
+    "AdoptionID": 13,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Aisha Patel",
+    "CourseCode": "CS 450",
+    "Term": "Summer 2021",
+    "AdoptionDate": "2021-04-28",
+    "Books": [
+      {
+        "BookID": 3,
+        "ISBN10": "0135863333",
+        "Title": "Fundamentals of Web Development, 3rd Ed.",
+        "Quantity": 46
+      },
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 18
+      }
+    ]
+  },
+  {
+    "AdoptionID": 15,
+    "UniversityID": 104151,
+    "University": {
+      "Name": "Arizona State University Campus Immersion",
+      "City": "Tempe",
+      "State": "AZ"
+    },
+    "Instructor": "Dr. Aisha Patel",
+    "CourseCode": "CS 101",
+    "Term": "Summer 2021",
+    "AdoptionDate": "2021-06-07",
+    "Books": [
+      {
+        "BookID": 3,
+        "ISBN10": "0135863333",
+        "Title": "Fundamentals of Web Development, 3rd Ed.",
+        "Quantity": 11
+      },
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 132
+      },
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 20
+      }
+    ]
+  },
+  {
+    "AdoptionID": 24,
+    "UniversityID": 228778,
+    "University": {
+      "Name": "The University of Texas at Austin",
+      "City": "Austin",
+      "State": "TX"
+    },
+    "Instructor": "Prof. James Chen",
+    "CourseCode": "CS 315",
+    "Term": "Spring 2021",
+    "AdoptionDate": "2021-07-09",
+    "Books": [
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 69
+      },
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 43
+      }
+    ]
+  },
+  {
+    "AdoptionID": 12,
+    "UniversityID": 126614,
+    "University": {
+      "Name": "University of Colorado Boulder",
+      "City": "Boulder",
+      "State": "CO"
+    },
+    "Instructor": "Dr. Sofia Ramirez",
+    "CourseCode": "IT 330",
+    "Term": "Spring 2021",
+    "AdoptionDate": "2021-07-13",
+    "Books": [
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 82
+      },
+      {
+        "BookID": 10,
+        "ISBN10": "0134610997",
+        "Title": "Computer Networking: A Top-Down Approach",
+        "Quantity": 42
+      },
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 40
+      }
+    ]
+  },
+  {
+    "AdoptionID": 27,
+    "UniversityID": 100706,
+    "University": {
+      "Name": "University of Alabama in Huntsville",
+      "City": "Huntsville",
+      "State": "AL"
+    },
+    "Instructor": "Prof. David Kim",
+    "CourseCode": "CS 101",
+    "Term": "Summer 2021",
+    "AdoptionDate": "2021-08-28",
+    "Books": [
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 47
+      }
+    ]
+  },
+  {
+    "AdoptionID": 11,
+    "UniversityID": 100706,
+    "University": {
+      "Name": "University of Alabama in Huntsville",
+      "City": "Huntsville",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Aisha Patel",
+    "CourseCode": "CS 450",
+    "Term": "Spring 2022",
+    "AdoptionDate": "2022-02-13",
+    "Books": [
+      {
+        "BookID": 10,
+        "ISBN10": "0134610997",
+        "Title": "Computer Networking: A Top-Down Approach",
+        "Quantity": 19
+      }
+    ]
+  },
+  {
+    "AdoptionID": 26,
+    "UniversityID": 126614,
+    "University": {
+      "Name": "University of Colorado Boulder",
+      "City": "Boulder",
+      "State": "CO"
+    },
+    "Instructor": "Prof. David Kim",
+    "CourseCode": "CIS 240",
+    "Term": "Summer 2022",
+    "AdoptionDate": "2022-02-26",
+    "Books": [
+      {
+        "BookID": 10,
+        "ISBN10": "0134610997",
+        "Title": "Computer Networking: A Top-Down Approach",
+        "Quantity": 125
+      },
+      {
+        "BookID": 3,
+        "ISBN10": "0135863333",
+        "Title": "Fundamentals of Web Development, 3rd Ed.",
+        "Quantity": 96
+      }
+    ]
+  },
+  {
+    "AdoptionID": 6,
+    "UniversityID": 134130,
+    "University": {
+      "Name": "University of Florida",
+      "City": "Gainesville",
+      "State": "FL"
+    },
+    "Instructor": "Dr. Sofia Ramirez",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2022",
+    "AdoptionDate": "2022-04-18",
+    "Books": [
+      {
+        "BookID": 6,
+        "ISBN10": "0134444329",
+        "Title": "Starting Out with Python",
+        "Quantity": 21
+      },
+      {
+        "BookID": 9,
+        "ISBN10": "1118531647",
+        "Title": "HTML and CSS: Design and Build Websites",
+        "Quantity": 136
+      },
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 146
+      }
+    ]
+  },
+  {
+    "AdoptionID": 30,
+    "UniversityID": 170976,
+    "University": {
+      "Name": "University of Michigan-Ann Arbor",
+      "City": "Ann Arbor",
+      "State": "MI"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "CS 315",
+    "Term": "Summer 2022",
+    "AdoptionDate": "2022-05-09",
+    "Books": [
+      {
+        "BookID": 4,
+        "ISBN10": "0133970779",
+        "Title": "Fundamentals of Database Systems",
+        "Quantity": 117
+      },
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 136
+      }
+    ]
+  },
+  {
+    "AdoptionID": 8,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "WEB 220",
+    "Term": "Fall 2022",
+    "AdoptionDate": "2022-08-12",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 105
+      }
+    ]
+  },
+  {
+    "AdoptionID": 7,
+    "UniversityID": 100663,
+    "University": {
+      "Name": "University of Alabama at Birmingham",
+      "City": "Birmingham",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Aisha Patel",
+    "CourseCode": "IT 330",
+    "Term": "Summer 2022",
+    "AdoptionDate": "2022-10-07",
+    "Books": [
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 69
+      },
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 63
+      }
+    ]
+  },
+  {
+    "AdoptionID": 4,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Emily Johnson",
+    "CourseCode": "WEB 220",
+    "Term": "Fall 2023",
+    "AdoptionDate": "2023-01-17",
+    "Books": [
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 127
+      },
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 69
+      }
+    ]
+  },
+  {
+    "AdoptionID": 25,
+    "UniversityID": 100751,
+    "University": {
+      "Name": "The University of Alabama",
+      "City": "Tuscaloosa",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Maria Lopez",
+    "CourseCode": "WEB 220",
+    "Term": "Summer 2023",
+    "AdoptionDate": "2023-06-03",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 112
+      },
+      {
+        "BookID": 9,
+        "ISBN10": "1118531647",
+        "Title": "HTML and CSS: Design and Build Websites",
+        "Quantity": 102
+      }
+    ]
+  },
+  {
+    "AdoptionID": 1,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. James Chen",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2023",
+    "AdoptionDate": "2023-07-26",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 50
+      },
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 149
+      },
+      {
+        "BookID": 6,
+        "ISBN10": "0134444329",
+        "Title": "Starting Out with Python",
+        "Quantity": 109
+      }
+    ]
+  },
+  {
+    "AdoptionID": 9,
+    "UniversityID": 228778,
+    "University": {
+      "Name": "The University of Texas at Austin",
+      "City": "Austin",
+      "State": "TX"
+    },
+    "Instructor": "Dr. Maria Lopez",
+    "CourseCode": "CS 315",
+    "Term": "Spring 2023",
+    "AdoptionDate": "2023-10-18",
+    "Books": [
+      {
+        "BookID": 5,
+        "ISBN10": "0134670949",
+        "Title": "Starting Out with Java: From Control Structures through Objects",
+        "Quantity": 50
+      },
+      {
+        "BookID": 3,
+        "ISBN10": "0135863333",
+        "Title": "Fundamentals of Web Development, 3rd Ed.",
+        "Quantity": 148
+      }
+    ]
+  },
+  {
+    "AdoptionID": 14,
+    "UniversityID": 145637,
+    "University": {
+      "Name": "University of Illinois Urbana-Champaign",
+      "City": "Champaign",
+      "State": "IL"
+    },
+    "Instructor": "Prof. Omar Haddad",
+    "CourseCode": "CS 210",
+    "Term": "Fall 2023",
+    "AdoptionDate": "2023-10-18",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 44
+      }
+    ]
+  },
+  {
+    "AdoptionID": 23,
+    "UniversityID": 100663,
+    "University": {
+      "Name": "University of Alabama at Birmingham",
+      "City": "Birmingham",
+      "State": "AL"
+    },
+    "Instructor": "Prof. David Kim",
+    "CourseCode": "CS 315",
+    "Term": "Spring 2023",
+    "AdoptionDate": "2023-11-04",
+    "Books": [
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 108
+      },
+      {
+        "BookID": 10,
+        "ISBN10": "0134610997",
+        "Title": "Computer Networking: A Top-Down Approach",
+        "Quantity": 144
+      },
+      {
+        "BookID": 6,
+        "ISBN10": "0134444329",
+        "Title": "Starting Out with Python",
+        "Quantity": 19
+      }
+    ]
+  },
+  {
+    "AdoptionID": 18,
+    "UniversityID": 100654,
+    "University": {
+      "Name": "Alabama A &amp; M University",
+      "City": "Normal",
+      "State": "AL"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "CS 101",
+    "Term": "Spring 2023",
+    "AdoptionDate": "2023-11-24",
+    "Books": [
+      {
+        "BookID": 9,
+        "ISBN10": "1118531647",
+        "Title": "HTML and CSS: Design and Build Websites",
+        "Quantity": 104
+      },
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 95
+      },
+      {
+        "BookID": 4,
+        "ISBN10": "0133970779",
+        "Title": "Fundamentals of Database Systems",
+        "Quantity": 128
+      }
+    ]
+  },
+  {
+    "AdoptionID": 20,
+    "UniversityID": 110635,
+    "University": {
+      "Name": "University of California-Berkeley",
+      "City": "Berkeley",
+      "State": "CA"
+    },
+    "Instructor": "Dr. Emily Johnson",
+    "CourseCode": "CS 450",
+    "Term": "Spring 2024",
+    "AdoptionDate": "2024-02-05",
+    "Books": [
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 63
+      }
+    ]
+  },
+  {
+    "AdoptionID": 16,
+    "UniversityID": 170976,
+    "University": {
+      "Name": "University of Michigan-Ann Arbor",
+      "City": "Ann Arbor",
+      "State": "MI"
+    },
+    "Instructor": "Dr. Sofia Ramirez",
+    "CourseCode": "CIS 240",
+    "Term": "Summer 2024",
+    "AdoptionDate": "2024-03-22",
+    "Books": [
+      {
+        "BookID": 4,
+        "ISBN10": "0133970779",
+        "Title": "Fundamentals of Database Systems",
+        "Quantity": 110
+      }
+    ]
+  },
+  {
+    "AdoptionID": 22,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. David Kim",
+    "CourseCode": "CS 210",
+    "Term": "Spring 2024",
+    "AdoptionDate": "2024-05-03",
+    "Books": [
+      {
+        "BookID": 5,
+        "ISBN10": "0134670949",
+        "Title": "Starting Out with Java: From Control Structures through Objects",
+        "Quantity": 129
+      }
+    ]
+  },
+  {
+    "AdoptionID": 2,
+    "UniversityID": 100654,
+    "University": {
+      "Name": "Alabama A &amp; M University",
+      "City": "Normal",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Emily Johnson",
+    "CourseCode": "WEB 220",
+    "Term": "Spring 2024",
+    "AdoptionDate": "2024-05-08",
+    "Books": [
+      {
+        "BookID": 9,
+        "ISBN10": "1118531647",
+        "Title": "HTML and CSS: Design and Build Websites",
+        "Quantity": 49
+      }
+    ]
+  },
+  {
+    "AdoptionID": 17,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2024",
+    "AdoptionDate": "2024-05-09",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 134
+      },
+      {
+        "BookID": 10,
+        "ISBN10": "0134610997",
+        "Title": "Computer Networking: A Top-Down Approach",
+        "Quantity": 87
+      }
+    ]
+  },
+  {
+    "AdoptionID": 21,
+    "UniversityID": 134130,
+    "University": {
+      "Name": "University of Florida",
+      "City": "Gainesville",
+      "State": "FL"
+    },
+    "Instructor": "Dr. Maria Lopez",
+    "CourseCode": "CS 101",
+    "Term": "Spring 2024",
+    "AdoptionDate": "2024-05-18",
+    "Books": [
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 82
+      },
+      {
+        "BookID": 5,
+        "ISBN10": "0134670949",
+        "Title": "Starting Out with Java: From Control Structures through Objects",
+        "Quantity": 34
+      },
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 114
+      }
+    ]
+  },
+  {
+    "AdoptionID": 28,
+    "UniversityID": 145637,
+    "University": {
+      "Name": "University of Illinois Urbana-Champaign",
+      "City": "Champaign",
+      "State": "IL"
+    },
+    "Instructor": "Prof. David Kim",
+    "CourseCode": "IT 330",
+    "Term": "Spring 2024",
+    "AdoptionDate": "2024-07-19",
+    "Books": [
+      {
+        "BookID": 3,
+        "ISBN10": "0135863333",
+        "Title": "Fundamentals of Web Development, 3rd Ed.",
+        "Quantity": 114
+      },
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 111
+      }
+    ]
+  },
+  {
+    "AdoptionID": 19,
+    "UniversityID": 100858,
+    "University": {
+      "Name": "Auburn University",
+      "City": "Auburn",
+      "State": "AL"
+    },
+    "Instructor": "Prof. James Chen",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2024",
+    "AdoptionDate": "2024-08-01",
+    "Books": [
+      {
+        "BookID": 6,
+        "ISBN10": "0134444329",
+        "Title": "Starting Out with Python",
+        "Quantity": 108
+      },
+      {
+        "BookID": 4,
+        "ISBN10": "0133970779",
+        "Title": "Fundamentals of Database Systems",
+        "Quantity": 20
+      },
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 32
+      }
+    ]
+  },
+  {
+    "AdoptionID": 3,
+    "UniversityID": 110635,
+    "University": {
+      "Name": "University of California-Berkeley",
+      "City": "Berkeley",
+      "State": "CA"
+    },
+    "Instructor": "Prof. David Kim",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2025",
+    "AdoptionDate": "2025-01-22",
+    "Books": [
+      {
+        "BookID": 9,
+        "ISBN10": "1118531647",
+        "Title": "HTML and CSS: Design and Build Websites",
+        "Quantity": 80
+      },
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 117
+      },
+      {
+        "BookID": 4,
+        "ISBN10": "0133970779",
+        "Title": "Fundamentals of Database Systems",
+        "Quantity": 47
+      }
+    ]
+  },
+  {
+    "AdoptionID": 5,
+    "UniversityID": 100858,
+    "University": {
+      "Name": "Auburn University",
+      "City": "Auburn",
+      "State": "AL"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2025",
+    "AdoptionDate": "2025-02-24",
+    "Books": [
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 141
+      }
+    ]
+  },
+  {
+    "AdoptionID": 10,
+    "UniversityID": 100751,
+    "University": {
+      "Name": "The University of Alabama",
+      "City": "Tuscaloosa",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Emily Johnson",
+    "CourseCode": "CS 450",
+    "Term": "Spring 2025",
+    "AdoptionDate": "2025-08-03",
+    "Books": [
+      {
+        "BookID": 6,
+        "ISBN10": "0134444329",
+        "Title": "Starting Out with Python",
+        "Quantity": 119
+      },
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 100
+      },
+      {
+        "BookID": 1,
+        "ISBN10": "0133407152",
+        "Title": "Fundamentals of Web Development",
+        "Quantity": 131
+      }
+    ]
+  },
+  {
+    "AdoptionID": 29,
+    "UniversityID": 104151,
+    "University": {
+      "Name": "Arizona State University Campus Immersion",
+      "City": "Tempe",
+      "State": "AZ"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "CS 315",
+    "Term": "Fall 2025",
+    "AdoptionDate": "2025-12-04",
+    "Books": [
+      {
+        "BookID": 2,
+        "ISBN10": "0134481267",
+        "Title": "Fundamentals of Web Development, 2nd Ed.",
+        "Quantity": 52
+      },
+      {
+        "BookID": 10,
+        "ISBN10": "0134610997",
+        "Title": "Computer Networking: A Top-Down Approach",
+        "Quantity": 85
+      },
+      {
+        "BookID": 9,
+        "ISBN10": "1118531647",
+        "Title": "HTML and CSS: Design and Build Websites",
+        "Quantity": 140
+      }
+    ]
+  }
+]</pre></details>
+    </section>
+
+    <section class="route-card" id="single">
+      <h2>Single adoption</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions/:id</p>
+      <form data-route="single">
+        <label for="adoption-id">AdoptionID</label>
+        <input type="number" id="adoption-id" value="14" min="1" required="">
+        <button type="submit">Run test</button>
+      </form>
+      <div class="status ok" aria-live="polite">HTTP 200 – 1 adoption(s) in 11 ms</div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">AdoptionID</th><th scope="col">Date</th><th scope="col">University</th><th scope="col">Course</th><th scope="col">Books</th></tr></thead><tbody><tr><td>14</td><td>2023-10-18</td><td>University of Illinois Urbana-Champaign (145637)</td><td>CS 210</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×44</td></tr></tbody></table></div>
+      <details><summary>Raw JSON</summary><pre class="output">{
+  "AdoptionID": 14,
+  "UniversityID": 145637,
+  "University": {
+    "Name": "University of Illinois Urbana-Champaign",
+    "City": "Champaign",
+    "State": "IL"
+  },
+  "Instructor": "Prof. Omar Haddad",
+  "CourseCode": "CS 210",
+  "Term": "Fall 2023",
+  "AdoptionDate": "2023-10-18",
+  "Books": [
+    {
+      "BookID": 8,
+      "ISBN10": "0134605535",
+      "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+      "Quantity": 44
+    }
+  ]
+}</pre></details>
+    </section>
+
+    <section class="route-card" id="university">
+      <h2>Adoptions by university</h2>
+      <p class="route"><span class="verb">GET</span> /api/adoptions/university/:id</p>
+      <form data-route="university">
+        <label for="university-id">UniversityID</label>
+        <input type="number" id="university-id" value="100724" min="1" required="">
+        <button type="submit">Run test</button>
+      </form>
+      <div class="status ok" aria-live="polite">HTTP 200 – 6 adoption(s) in 4 ms</div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">AdoptionID</th><th scope="col">Date</th><th scope="col">University</th><th scope="col">Course</th><th scope="col">Books</th></tr></thead><tbody><tr><td>13</td><td>2021-04-28</td><td>Alabama State University (100724)</td><td>CS 450</td><td>Fundamentals of Web Development, 3rd Ed. ×46; JavaScript &amp; jQuery: Interactive Front-End Web Development ×18</td></tr><tr><td>8</td><td>2022-08-12</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×105</td></tr><tr><td>4</td><td>2023-01-17</td><td>Alabama State University (100724)</td><td>WEB 220</td><td>Computer Science: An Overview ×127; JavaScript &amp; jQuery: Interactive Front-End Web Development ×69</td></tr><tr><td>1</td><td>2023-07-26</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×50; Computer Science: An Overview ×149; Starting Out with Python ×109</td></tr><tr><td>22</td><td>2024-05-03</td><td>Alabama State University (100724)</td><td>CS 210</td><td>Starting Out with Java: From Control Structures through Objects ×129</td></tr><tr><td>17</td><td>2024-05-09</td><td>Alabama State University (100724)</td><td>CS 101</td><td>JavaScript &amp; jQuery: Interactive Front-End Web Development ×134; Computer Networking: A Top-Down Approach ×87</td></tr></tbody></table></div>
+      <details><summary>Raw JSON</summary><pre class="output">[
+  {
+    "AdoptionID": 13,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Aisha Patel",
+    "CourseCode": "CS 450",
+    "Term": "Summer 2021",
+    "AdoptionDate": "2021-04-28",
+    "Books": [
+      {
+        "BookID": 3,
+        "ISBN10": "0135863333",
+        "Title": "Fundamentals of Web Development, 3rd Ed.",
+        "Quantity": 46
+      },
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 18
+      }
+    ]
+  },
+  {
+    "AdoptionID": 8,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "WEB 220",
+    "Term": "Fall 2022",
+    "AdoptionDate": "2022-08-12",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 105
+      }
+    ]
+  },
+  {
+    "AdoptionID": 4,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Dr. Emily Johnson",
+    "CourseCode": "WEB 220",
+    "Term": "Fall 2023",
+    "AdoptionDate": "2023-01-17",
+    "Books": [
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 127
+      },
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 69
+      }
+    ]
+  },
+  {
+    "AdoptionID": 1,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. James Chen",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2023",
+    "AdoptionDate": "2023-07-26",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 50
+      },
+      {
+        "BookID": 7,
+        "ISBN10": "0133943038",
+        "Title": "Computer Science: An Overview",
+        "Quantity": 149
+      },
+      {
+        "BookID": 6,
+        "ISBN10": "0134444329",
+        "Title": "Starting Out with Python",
+        "Quantity": 109
+      }
+    ]
+  },
+  {
+    "AdoptionID": 22,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. David Kim",
+    "CourseCode": "CS 210",
+    "Term": "Spring 2024",
+    "AdoptionDate": "2024-05-03",
+    "Books": [
+      {
+        "BookID": 5,
+        "ISBN10": "0134670949",
+        "Title": "Starting Out with Java: From Control Structures through Objects",
+        "Quantity": 129
+      }
+    ]
+  },
+  {
+    "AdoptionID": 17,
+    "UniversityID": 100724,
+    "University": {
+      "Name": "Alabama State University",
+      "City": "Montgomery",
+      "State": "AL"
+    },
+    "Instructor": "Prof. Robert Miller",
+    "CourseCode": "CS 101",
+    "Term": "Fall 2024",
+    "AdoptionDate": "2024-05-09",
+    "Books": [
+      {
+        "BookID": 8,
+        "ISBN10": "0134605535",
+        "Title": "JavaScript &amp; jQuery: Interactive Front-End Web Development",
+        "Quantity": 134
+      },
+      {
+        "BookID": 10,
+        "ISBN10": "0134610997",
+        "Title": "Computer Networking: A Top-Down Approach",
+        "Quantity": 87
+      }
+    ]
+  }
+]</pre></details>
+    </section>
+
+    <section class="route-card" id="checks">
+      <h2>Automated checks</h2>
+      <p>Runs all three routes plus two error cases and checks each response.</p>
+      <button type="button" id="run-all">Run all checks</button>
+      <ul class="checks" aria-live="polite"><li class="pass">GET /api/adoptions returns a non-empty array sorted by AdoptionDate</li><li class="pass">GET /api/adoptions/14 returns the adoption with AdoptionID 14</li><li class="pass">GET /api/adoptions/university/100724 returns only UniversityID 100724</li><li class="pass">GET /api/adoptions/9999 returns 404 for a missing adoption</li><li class="pass">GET /api/adoptions/abc returns 400 for a non-numeric id</li></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Signature Assignment – Web Development II</p>
+  </footer>
+
+
+</body></html>

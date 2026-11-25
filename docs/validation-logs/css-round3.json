@@ -1,0 +1,228 @@
+{
+  "cssvalidation" : {
+     "uri"       : "styles.css",
+     "checkedby" : "http://www.w3.org/2005/07/css-validator",
+     "csslevel"  : "css3",
+     "date"      : "2026-11-25T06:41:49Z",
+     "timestamp" : "1795632109901",
+     "validity"  : true,
+     "result"    : {
+		"errorcount"   : 0,
+		"warningcount" : 26
+                   }
+       ,
+     "warnings"   : [
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 219,
+       "context" :  "button:focus-visible", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 219,
+       "context" :  "button:hover", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 304,
+         "message" :  "Redefinition of \u201Cborder-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 368,
+       "context" :  ".json-btn:focus-visible", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 368,
+       "context" :  ".json-btn:hover", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 478,
+         "message" :  "Redefinition of \u201Cflex\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 483,
+         "message" :  "Redefinition of \u201Cmargin-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 483,
+         "message" :  "Redefinition of \u201Cmargin-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 483,
+         "message" :  "Redefinition of \u201Cmargin-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 483,
+         "message" :  "Redefinition of \u201Cmargin-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 484,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 488,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 488,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 488,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/styles.css",
+         "line"    : 488,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cborder-top-width\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cborder-top-color\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cborder-top-style\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cborder-bottom-width\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cborder-bottom-color\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cborder-bottom-style\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cflex-basis\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cflex-grow\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Cflex-shrink\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+                     ]
+    }
+}
